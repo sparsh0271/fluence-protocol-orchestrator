@@ -2,95 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
+    /* Light Theme: Sophisticated, Clean, Influencer-Friendly */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --foreground: 222 47% 11%;
+    
+    --card: 210 40% 98%;
+    --card-foreground: 222 47% 11%;
+    
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
+    --popover-foreground: 222 47% 11%;
+    
+    --primary: 244 76% 53%; /* Sophisticated Indigo #4f46e5 */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+    
+    --muted: 215 20% 65%;
+    --muted-foreground: 215 16% 47%;
+    
+    --accent: 244 76% 53%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 244 76% 53%;
+    
     --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Custom DotFluence tokens */
+    --dot-color: 244 76% 53% / 0.05;
+    --glass-bg: 0 0% 100% / 0.8;
+    --glow: transparent;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Dark Theme: Signature Black & Neon */
+    --background: 0 0% 1%;
+    --foreground: 0 0% 100%;
+    
+    --card: 0 0% 4%;
+    --card-foreground: 0 0% 100%;
+    
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 100%;
+    
+    --primary: 75 100% 50%; /* Signature Neon #ccff00 */
+    --primary-foreground: 0 0% 0%;
+    
+    --secondary: 240 6% 10%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 240 4% 66%;
+    --muted-foreground: 240 4% 66%;
+    
+    --accent: 75 100% 50%;
+    --accent-foreground: 0 0% 0%;
+    
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 100% / 0.05;
+    --input: 0 0% 100% / 0.05;
+    --ring: 75 100% 50%;
+    
+    /* Custom DotFluence tokens */
+    --dot-color: 75 100% 50% / 0.08;
+    --glass-bg: 0 0% 1% / 0.8;
+    --glow: 75 100% 50% / 0.1;
   }
 }
 
@@ -98,8 +82,101 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased overflow-x-hidden;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  
+  p, h1, h2, h3, h4, span {
+    transition: color 0.5s ease;
+  }
+}
+
+@layer components {
+  .font-heading {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  
+  .font-sans {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  
+  .dot-matrix {
+    background-image: radial-gradient(hsl(var(--dot-color)) 1.5px, transparent 0);
+    background-size: 40px 40px;
+  }
+  
+  .glass {
+    background: hsl(var(--glass-bg));
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--border));
+    transition: all 0.3s ease;
+  }
+  
+  .btn-protocol {
+    @apply bg-primary text-primary-foreground font-extrabold uppercase tracking-[0.1em] rounded-sm;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .btn-protocol:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px hsl(var(--glow));
+    filter: brightness(1.1);
+  }
+  
+  .card-hover {
+    @apply transition-all duration-500;
+  }
+  
+  .card-hover:hover {
+    border-color: hsl(var(--primary));
+    background: hsl(var(--card));
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  }
+  
+  .theme-switch {
+    @apply w-[54px] h-7 rounded-[20px] relative cursor-pointer p-1 flex items-center;
+    background: hsl(var(--border));
+  }
+  
+  .theme-switch-circle {
+    @apply w-5 h-5 rounded-full transition-transform duration-300;
+    background: hsl(var(--foreground));
+  }
+  
+  .dark .theme-switch-circle {
+    transform: translateX(26px);
+    background: hsl(var(--primary));
+  }
+  
+  .marquee-container {
+    @apply flex overflow-hidden;
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  }
+  
+  .reveal {
+    @apply opacity-0 translate-y-[30px];
+    transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  
+  .reveal.active {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+@layer utilities {
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  
+  .animate-marquee {
+    animation: scroll 40s linear infinite;
   }
 }
